@@ -2,11 +2,11 @@ class CreateRappers < ActiveRecord::Migration
   def change
     create_table :rappers do |t|
       t.text :name
-      t.int :pussy_count
-      t.int :bitch_count
-      t.int :ho_count
-      t.int :overall_score
-      t.int :song_count
+      t.integer :pussy_count
+      t.integer :bitch_count
+      t.integer :ho_count
+      t.integer :overall_score
+      t.integer :song_count
 
       t.timestamps null: false
     end
