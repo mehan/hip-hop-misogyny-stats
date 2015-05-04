@@ -1,20 +1,39 @@
 class RappersController < ApplicationController
 
   def new
-    @rapper_name = params[:rapper_name]
-  end
+    @rapper = Rapper.new
 
-  def show
+  #   if Rapper.find_by(name: @rapper).exists?
+  #     redirect_to @rapper
+  #   else
+  #     Rapper.lookup_rapper(@rapper)
+  # end
+
+end
+
+  def index
     @all_rappers = Rappers.all
   end
 
+  def show
+  end
+
+  def create
+    @rapper = Rapper.new(rapper_params)
+    if @rapper.save
+    redirect_to @rapper
+  else
+    render :new
+  end
+  end
 
 
+  def lookup_rapper(rapper_name)
 
-def lookup_rapper(rapper_name)
+# else
+#   render :new, alert: "Sorry, the rapper you searched for was not found."
 
 
-  # Rapper.find_by(name: 'rapper_name')
 
 song_index = RapGenius.search_by_artist("#{rapper_name}")
 
@@ -65,6 +84,11 @@ end
 end
 
 
+private
+
+def rapper_params
+  params.require(:rapper).permit(:name)
+end
 
 
 end

@@ -1,1 +1,15 @@
-this is the new rappers view cool
+  <% if @rapper.errors.any? %>
+  <% @rapper.errors.full_messages.each do |message| %>
+  <%= message %>
+  <% end %>
+  <% end %>
+
+
+
+<%= form_for @rapper do |f| %>
+<%= f.label :name, "Enter the name of a rapper to look up:" %>
+</br>
+<%= f.text_field :name %>
+</br>
+<%= f.submit "Lookup rapper" %>
+<% end %>
