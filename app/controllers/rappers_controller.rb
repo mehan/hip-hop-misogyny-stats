@@ -1,16 +1,20 @@
 class RappersController < ApplicationController
 
   def new
-    @rapper = params[:rapper]
+    @rapper_name = params[:rapper_name]
   end
 
   def show
+    @all_rappers = Rappers.all
   end
 
 
 
 
 def lookup_rapper(rapper_name)
+
+
+  # Rapper.find_by(name: 'rapper_name')
 
 song_index = RapGenius.search_by_artist("#{rapper_name}")
 
@@ -51,23 +55,16 @@ else
     end
 
   rapper = Rapper.new(rapper_name, pussy_count, bitch_count, ho_count, song_count)
+
+  # Rapper.create(name: "" pussy_count: "" bitch_count: "" ho_count: "" overall_score: "" song_count: "")
+
   
   print_rapper(rapper)
 
 end
 end
 
-def print_rapper(rapper)
 
-  puts "\n" 
-  puts "Here are the misogyny stats for #{rapper.name}:"
-  puts "\n" 
-  puts "Out of the #{rapper.song_count} songs analyzed, #{rapper.name} uses the word 'bitch' #{rapper.bitch_score} times, 'pussy' #{rapper.pussy_score} times and 'ho' #{rapper.ho_score} times."
-  puts "\n" 
-  puts "Overall, we found #{rapper.bitch_score + rapper.pussy_score + rapper.ho_score} misogynistic lyrics in #{rapper.song_count} #{rapper.name} songs."
-  puts "\n" 
-
-end
 
 
 end
