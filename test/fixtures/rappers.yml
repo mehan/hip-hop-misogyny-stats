@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  pussy_count: 
+  bitch_count: 
+  ho_count: 
+  overall_score: 
+  song_count: 
+
+two:
+  name: MyText
+  pussy_count: 
+  bitch_count: 
+  ho_count: 
+  overall_score: 
+  song_count: 

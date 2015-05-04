@@ -1,6 +1,7 @@
 class RappersController < ApplicationController
 
   def new
+    @rapper = params[:rapper]
   end
 
   def show
@@ -67,6 +68,6 @@ def print_rapper(rapper)
   puts "\n" 
 
 end
-  
+
 
 end
