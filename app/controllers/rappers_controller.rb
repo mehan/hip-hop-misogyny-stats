@@ -13,13 +13,11 @@ end
 
 def create
  @rapper = Rapper.new(rapper_params)
+ 
+if @rapper.name == nil
+  render :new, alert: "Please enter the name of an artist in the search box."
 
-# if params['rapper'] == ""
-# # if rapper_params == ""
-#   render :new, alert: "Sorry, the rapper you searched for was not found."
-
-
-if Rapper.exists?(name: @rapper.name)
+elsif Rapper.exists?(name: @rapper.name)
       redirect_to rapper_path
     else
 
@@ -28,6 +26,7 @@ if Rapper.exists?(name: @rapper.name)
 if @song_index == []
   render :new, alert: "Sorry, the rapper you searched for was not found."
 else
+  @artist_name = @song_index[1].artist.name
   @song_ids = @song_index.map do |song| 
     song.id 
   end
@@ -41,7 +40,6 @@ else
   end
 
   @lyrics_string = @all_lyrics.join(",")
-
   @lyrics_array = @lyrics_string.split(/\W+/)
 
   @pussy_count = 0
@@ -63,9 +61,9 @@ else
 
 binding.pry
 
-# @new_rapper = Rapper.new(name:"#{@name}" pussy_count:"#{@pussy_count}" bitch_count:"#{@bitch_count}" ho_count:"#{@ho_count}" overall_score:"#{@overall_score}" song_count:"#{@song_count}")
+# @new_rapper = Rapper.new(name:"#{@artist_name}" pussy_count:"#{@pussy_count}" bitch_count:"#{@bitch_count}" ho_count:"#{@ho_count}" overall_score:"#{@overall_score}" song_count:"#{@song_count}")
 
-# @new_rapper = Rapper.new(name:@name pussy_count:@pussy_count bitch_count:@bitch_count ho_count:@ho_count overall_score:@overall_score song_count:@song_count)
+# @new_rapper = Rapper.new(name:@artist_name pussy_count:@pussy_count bitch_count:@bitch_count ho_count:@ho_count overall_score:@overall_score song_count:@song_count)
 
 #     if @new_rapper.save
 #     redirect_to rapper_path

@@ -1,4 +1,4 @@
-  <% if @rapper != nil && @rapper.errors.any? %>
+  <% if @rapper.errors.any? %>
   <% @rapper.errors.full_messages.each do |message| %>
   <div class = "alert alert-danger">
   <%= message %>
@@ -9,7 +9,7 @@
 
 
 <%= form_for @rapper do |f| %>
-<%= f.label :name, "Enter the name of a rapper to look up:" %>
+<%= f.label :name, "Enter the name of a hip-hop artist to look up:" %>
 </br>
 <%= f.text_field :name %>
 </br>
