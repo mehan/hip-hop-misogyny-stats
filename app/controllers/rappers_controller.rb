@@ -12,16 +12,18 @@ end
   end
 
 def create
+ @rapper = Rapper.new(rapper_params)
 
-if @rapper == ""
-  render :new, alert: "Sorry, the rapper you searched for was not found."
+# if params['rapper'] == ""
+# # if rapper_params == ""
+#   render :new, alert: "Sorry, the rapper you searched for was not found."
 
-elsif Rapper.exists?(name: rapper_params['name'])
-  # if Rapper.find_by(name: @rapper).exists?
+
+if Rapper.exists?(name: @rapper.name)
       redirect_to rapper_path
     else
 
-@song_index = RapGenius.search_by_artist(@rapper)
+@song_index = RapGenius.search_by_artist(@rapper.name)
 
 if @song_index == []
   render :new, alert: "Sorry, the rapper you searched for was not found."
@@ -59,6 +61,7 @@ else
 
   @overall_score = @pussy_count + @bitch_count + @ho_count  
 
+binding.pry
 
 # @new_rapper = Rapper.new(name:"#{@name}" pussy_count:"#{@pussy_count}" bitch_count:"#{@bitch_count}" ho_count:"#{@ho_count}" overall_score:"#{@overall_score}" song_count:"#{@song_count}")
 
@@ -77,8 +80,8 @@ end
 
 private
 
-# def rapper_params
-#   params.require(:rapper).permit(:name)
-# end
+def rapper_params
+  params.require(:rapper).permit(:name)
+end
 
 end
