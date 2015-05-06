@@ -9,6 +9,7 @@ end
   end
 
   def show
+    @rapper = Rapper.find(params[:id])
   end
 
 def create
@@ -18,7 +19,7 @@ if @rapper.name == nil
   render :new, alert: "Please enter the name of an artist in the search box."
 
 elsif Rapper.exists?(name: @rapper.name)
-      redirect_to rapper_path
+      redirect_to @rapper
     else
 
 @song_index = RapGenius.search_by_artist(@rapper.name)
@@ -64,11 +65,10 @@ else
 @new_rapper = Rapper.new(name:@artist_name, pussy_count:@pussy_count, bitch_count:@bitch_count, ho_count:@ho_count, overall_score:@overall_score, song_count:@song_count)
 
     if @new_rapper.save
-    redirect_to rapper_path
+    redirect_to @new_rapper
   else
     render :new, alert: "Sorry, we encountered an error while trying to look up that rapper. Please try again."
 end
-
 end
 end
 end
@@ -76,7 +76,7 @@ end
 private
 
 def rapper_params
-  params.require(:rapper).permit(:name)
+  params.require(:rapper).permit(:name, :id)
 end
 
 end
