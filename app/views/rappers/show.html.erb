@@ -1,10 +1,8 @@
-I'm showing you the rapper now
+<p>Here are the misogyny stats for <%= @rapper.name %>:</p>
+<p>Out of the <%= @rapper.song_count %> songs analyzed, <%= @rapper.name %> uses the word 'bitch' <%= @rapper.bitch_count %> times, 'pussy' <%= @rapper.pussy_count %> times and 'ho' <%= @rapper.ho_count %> times.</p>
+<p>Overall, we found <%= @rapper.overall_score %> misogynistic lyrics in <%= @rapper.song_count %> <%= @rapper.name %> songs.</p>
 
-<!--   puts "\n" 
-  puts "Here are the misogyny stats for #{rapper.name}:"
-  puts "\n" 
-  puts "Out of the #{rapper.song_count} songs analyzed, #{rapper.name} uses the word 'bitch' #{rapper.bitch_score} times, 'pussy' #{rapper.pussy_score} times and 'ho' #{rapper.ho_score} times."
-  puts "\n" 
-  puts "Overall, we found #{rapper.bitch_score + rapper.pussy_score + rapper.ho_score} misogynistic lyrics in #{rapper.song_count} #{rapper.name} songs."
-  puts "\n" 
- -->
+<p><%= link_to 'Look up another artist', root_path, class: '' %></p>
+<p><%= link_to 'View the stats for all artists', rappers_path, class: '' %></p>
+
+

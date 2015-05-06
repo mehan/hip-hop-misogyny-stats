@@ -5,7 +5,7 @@ class RappersController < ApplicationController
 end
 
   def index
-    @all_rappers = Rappers.all
+    @all_rappers = Rapper.where(song_count: 20)
   end
 
   def show

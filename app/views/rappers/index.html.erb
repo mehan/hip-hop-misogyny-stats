@@ -1,0 +1,27 @@
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>Artist Name</th>
+      <th>Bitch Count</th>
+      <th>Pussy Count</th>
+      <th>Ho Count</th>
+      <th>Overall Score</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @all_rappers.each do |r| %>
+<tr>
+<td><%= r.name %></td>
+<td><%=r.bitch_count%></td>
+<td><%=r.pussy_count%></td>
+<td><%=r.ho_count%></td>
+<td><%=r.overall_score%></td>
+</tr>
+<% end %>
+  </tbody>
+</table>
+
+
+
+
+
