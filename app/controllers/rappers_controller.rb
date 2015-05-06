@@ -19,7 +19,8 @@ if @rapper.name == nil
   render :new, alert: "Please enter the name of an artist in the search box."
 
 elsif Rapper.exists?(name: @rapper.name)
-      redirect_to @rapper
+      @new_rapper = Rapper.find_by(name: @rapper.name)
+      redirect_to @new_rapper
     else
 
 @song_index = RapGenius.search_by_artist(@rapper.name)
