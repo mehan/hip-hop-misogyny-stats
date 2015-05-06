@@ -59,18 +59,15 @@ else
 
   @overall_score = @pussy_count + @bitch_count + @ho_count  
 
-binding.pry
-
 # @new_rapper = Rapper.new(name:"#{@artist_name}" pussy_count:"#{@pussy_count}" bitch_count:"#{@bitch_count}" ho_count:"#{@ho_count}" overall_score:"#{@overall_score}" song_count:"#{@song_count}")
 
-# @new_rapper = Rapper.new(name:@artist_name pussy_count:@pussy_count bitch_count:@bitch_count ho_count:@ho_count overall_score:@overall_score song_count:@song_count)
+@new_rapper = Rapper.new(name:@artist_name, pussy_count:@pussy_count, bitch_count:@bitch_count, ho_count:@ho_count, overall_score:@overall_score, song_count:@song_count)
 
-#     if @new_rapper.save
-#     redirect_to rapper_path
-#   else
-#     render :new, alert: "Sorry, we encountered an error while trying to look up that rapper. Please try again."
-  
-# end
+    if @new_rapper.save
+    redirect_to rapper_path
+  else
+    render :new, alert: "Sorry, we encountered an error while trying to look up that rapper. Please try again."
+end
 
 end
 end
