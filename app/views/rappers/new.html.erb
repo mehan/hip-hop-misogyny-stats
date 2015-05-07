@@ -7,11 +7,10 @@
   <% end %>
 
 
-
 <%= form_for @rapper do |f| %>
 <%= f.label :name, "Enter the name of a hip-hop artist to look up:" %>
 </br>
 <%= f.text_field :name %>
 </br>
-<%= f.submit "Lookup artist" %>
+<%= f.button "Lookup artist", class: "btn btn-success", data: {disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Looking up artist..."} %>
 <% end %>

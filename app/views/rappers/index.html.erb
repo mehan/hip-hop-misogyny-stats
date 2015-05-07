@@ -1,13 +1,15 @@
-<script src='tablesort.numeric.js'></script>
+
+
+<!-- <script src='tablesort.numeric.js'></script> -->
 
 <table class="table table-hover table-responsive" id="rappers_table">
   <caption>Only artists for whom 20 or more songs are available will be displayed. Over time, more artists will be added to the database as more searches are performed.</caption>
   <thead>
     <tr>
       <th>Artist Name</th>
-      <th>Bitch Count</th>
-      <th>Pussy Count</th>
-      <th>Ho Count</th>
+      <th data-sort-method='dotsep'>Bitch Count</th>
+      <th data-sort-method='dotsep'>Pussy Count</th>
+      <th data-sort-method='dotsep'>Ho Count</th>
       <th class='sort-default'>Overall Score</th>
     </tr>
   </thead>
@@ -24,8 +26,11 @@
   </tbody>
 </table>
 
+
 <script>
-  new Tablesort(document.getElementById('rappers_table'));
+new Tablesort(document.getElementById('rappers_table'), {
+  descending: true
+});
 </script>
 
 

@@ -56,9 +56,7 @@ elsif Rapper.exists?(name: @song_index[1].artist.name)
     end
     end
 
-  @overall_score = @pussy_count + @bitch_count + @ho_count  
-
-# @new_rapper = Rapper.new(name:"#{@artist_name}" pussy_count:"#{@pussy_count}" bitch_count:"#{@bitch_count}" ho_count:"#{@ho_count}" overall_score:"#{@overall_score}" song_count:"#{@song_count}")
+@overall_score = @pussy_count + @bitch_count + @ho_count  
 
 @new_rapper = Rapper.new(name:@artist_name, pussy_count:@pussy_count, bitch_count:@bitch_count, ho_count:@ho_count, overall_score:@overall_score, song_count:@song_count)
 

@@ -27,6 +27,7 @@ gem 'rapgenius'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'
+gem 'font-awesome-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -37,7 +38,15 @@ gem 'autoprefixer-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+
 group :development, :test do
+
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -48,7 +57,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'pry-rails'
-
   gem 'better_errors'
   gem 'binding_of_caller'
 
