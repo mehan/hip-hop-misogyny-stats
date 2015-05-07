@@ -7,6 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Hip-Hop Misogyny Calculator</a>
+      </a>
+    </div>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Look up Artist', root_path, class: 'navbar-brand' %></li>
+        <li><%= link_to 'View the Stats', rappers_path, class: 'navbar-brand' %></li>
+        <li><%= link_to 'API', root_path, class: 'navbar-brand' %></li>
+        <li><%= link_to 'About', root_path, class: 'navbar-brand' %></li>
+      </div>
+</div>
+</nav>
+
 <% if alert %>
 <div class = "alert alert-danger">
   <%= alert %>
