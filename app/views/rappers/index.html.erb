@@ -13,9 +13,10 @@
     </tr>
   </thead>
   <tbody>
-<% @all_rappers.each do |r| %>
-<tr>
-<td><%= r.name %></td>
+<% @all_rappers.each do |r| %> 
+<tr> 
+
+<td><%= link_to r.name, rapper_path(:id => r.id), class: '' %></td>
 <td><%=r.bitch_count%></td>
 <td><%=r.pussy_count%></td>
 <td><%=r.ho_count%></td>
