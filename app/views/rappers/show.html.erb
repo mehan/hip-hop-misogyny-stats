@@ -1,8 +1,10 @@
-<p>Here are the misogyny stats for <%= @rapper.name %>:</p>
-<p>Out of the <%= @rapper.song_count %> songs analyzed, <%= @rapper.name %> uses the word 'bitch' <%= @rapper.bitch_count %> times, 'pussy' <%= @rapper.pussy_count %> times and 'ho' <%= @rapper.ho_count %> times.</p>
-<p>Overall, we found <%= @rapper.overall_score %> misogynistic lyrics in <%= @rapper.song_count %> <%= @rapper.name %> songs.</p>
+<h2>Here are the misogyny stats for <%= @rapper.name %>:</h2>
 
-<p><%= link_to 'Look up another artist', root_path, class: '' %></p>
-<p><%= link_to 'View the stats for all artists', rappers_path, class: '' %></p>
-
+<h3>In the <%= @rapper.song_count %> most popular* <%= @rapper.name %> songs, <%= @rapper.name %> uses the word 'bitch' <%= @rapper.bitch_count %> times, 'pussy' <%= @rapper.pussy_count %> times and 'hoe' <%= @rapper.ho_count %> times.</h3>
+<h3>Overall, we found <%= @rapper.overall_score %> misogynistic lyrics in <%= @rapper.song_count %> <%= @rapper.name %> songs.</h3>
+<p>*According to RapGenius</p>
+</br>
+<h4><%= link_to 'Look up another artist', root_path, class: '' %></h4>
+<h4><%= link_to 'View the stats for all artists', rappers_path, class: '' %></h4>
+</br>
 

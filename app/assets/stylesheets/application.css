@@ -5,10 +5,9 @@
  *= require font-awesome
  *= require table
  *= require bootstrap_and_overrides
+ *= require jquery-tablesorter/theme.black-ice
  *= require base
  *= require_self
  *= require_tree .
 */
-
-body {background-image: linear-gradient(-90deg, #ED9B64, #FF0AC6);}
 

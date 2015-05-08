@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery-tablesorter
 //= require turbolinks
-//= require tablesort.min
 //= require_tree .

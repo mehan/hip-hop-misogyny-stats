@@ -1,10 +1,8 @@
 
 
-<!-- <script src='tablesort.numeric.js'></script> -->
-
-<p>Stats are based on the number of times each term appears in an artist's top 20 most popular songs on RapGenius. Over time, more artists will be added to the database as more searches are performed. Click on a column below to sort by that column.</p>
+<p>Stats are based on the number of times each term appears in an artist's top 20 most popular songs on RapGenius. Over time, more artists will be added to the database as more searches are performed. By default, artists are sorted by overall score, descending. Click on a column name to sort by that column.</p>
 </br>
-<table class="table table-hover table-responsive" id="rappers_table">
+<table class="table table-hover table-responsive tablesorter" id="rappers_table">
   <thead>
     <tr>
       <th>Artist Name</th>
@@ -29,8 +27,8 @@
 
 
 <script>
-new Tablesort(document.getElementById('rappers_table'), {
-  descending: true
+$(function(){
+  $("#rappers_table").tablesorter({ sortList: [[4,1]] });
 });
 </script>
 
