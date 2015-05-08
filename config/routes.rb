@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 root 'rappers#new'
 resources :rappers
+get 'api' => 'rappers#api'
+get 'about' => 'rappers#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

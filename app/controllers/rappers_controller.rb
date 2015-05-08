@@ -1,5 +1,11 @@
 class RappersController < ApplicationController
 
+def api
+end
+
+def about
+  end
+
   def new
     @rapper = Rapper.new
 end
