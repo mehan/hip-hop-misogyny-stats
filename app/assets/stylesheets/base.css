@@ -9,17 +9,12 @@ color: white;
   background-color: grey;
 }
 
-a {
+a {color: #7FDBFF;}
 
-color: #7FDBFF;
-
+.navbar {
+   background-color:rgba(0, 0, 0, 0.2);
+/*   background: transparent;*/
+border: 0;
 }
 
-.btn-xlarge {
-    padding: 18px 28px;
-    font-size: 22px;
-    line-height: normal;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-}
+.navbar .nav > li > a { color: #7FDBFF; } 
