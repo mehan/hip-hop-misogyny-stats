@@ -6,13 +6,16 @@
   <% end %>
   <% end %>
 
+<h3>Stats on the frequency with which misogynistic words appear in hip-hop songs</h3>
+</br>
+
 <div class="form-group">
+  <h4>Enter the name of a hip-hop artist:</h4>
 <%= form_for @rapper do |f| %>
-<%= f.label :name, "Enter the name of a hip-hop artist to look up:" %>
 </br>
 </br>
 <%= f.text_field :name, class: "form-control input-lg" %>
 </br>
-<%= f.button "Lookup artist", class: "btn btn-success form-control input-lg", data: {disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Looking up artist..."} %>
+<%= f.button "Lookup artist", class: "btn btn-warning form-control input-lg", data: {disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Looking up artist..."} %>
 <% end %>
 </div>
