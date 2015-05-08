@@ -4,6 +4,7 @@ def api
 end
 
 def about
+  @rappers = Rapper.all
   end
 
   def new
