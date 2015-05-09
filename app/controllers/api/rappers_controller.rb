@@ -2,7 +2,7 @@ module Api
   class RappersController < Api::BaseController
 
   def index
-    @all_rappers = Rapper.where(song_count: 20)
+    @all_rappers = Rapper.all
   end
 
   # def show

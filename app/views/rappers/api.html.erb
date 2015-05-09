@@ -1,1 +1,24 @@
-This is the API page
+<p>All of the data in the Hip-Hop Misogyny Stats database is availalbe in JSON format via a REST API for the purposes of research, data visualization or anything else you can come up with. Here's everyhing you'll need to know in order to get started:</p>
+<ul>
+<li>There are two API endpoints you can hit: <a href="/api/rappers">/api/rappers</a> returns all of the rappers in the database, while <a href="http://localhost:3000/api/rappers/1">api/rappers/[id]</a> (where "[id]" is the rapper's <code>id:</code> key) returns an individual rapper. Arguments can be passed as GET methods only. Both endpoints will return a JSON object for each artist that looks like this:</li>
+</br>
+<code>{</br>
+id: 2,</br>
+name: "Lil B",</br>
+overall_score: 290,</br>
+pussy_count: 13,</br>
+bitch_count: 239,</br>
+ho_count: 38,</br>
+song_count: 20,</br>
+created_at: "2015-05-06T20:33:36.432Z",</br>
+updated_at: "2015-05-06T20:33:36.432Z"</br>
+}</code>
+</br></br>
+<li>If, for example, you want to find an individual rapper, you can loop through the data in <a href="/api/rappers">/api/rappers</a>, search for the rapper whose name matches the artist you're looking for, access that aritst's id and then perform a search using <a href="http://localhost:3000/api/rappers/1">api/rappers/[id]</a>, which will return only the artist you're looking for.</li>
+<li>For some artists, fewer than 20 songs were available for analysis. In the <a href="/rappers">stats view</a>, I've chosen not to display artists for whom less than 20 songs were available, in order to provide a proper baseline for the stats. You will likely want to do the same, if you're comparing arists' stats side-by-side. You can use the <code>song_count:</code> key to filter by the total number of songs analyzed.
+</li>
+<li>The data contained in this API is made available for use under a <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution License</a>. Essentially, this means that you can use the data however you please, provided that you identify Hip-Hop Misogyny Stats as the source for the data.</li>
+<li>This API is offered "as is" without warranty or support of any kind. That said, if you identify a problem with the API or data, feel free to open an issue <a href="https://github.com/mehan/hip-hop-misogyny-stats">on GitHub</a> and I'll look into it.</li>
+<li>Did you build something cool using the Hip-Hop Misogyny Stats data? Please <a href="http://mehan.info">let me know</a>--I'd love to see it!</li>
+</ul>
+
