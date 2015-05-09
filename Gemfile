@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'rapgenius'
+gem "rapgenius", "~> 1.0.5"
 gem "twitter-bootstrap-rails"
 # gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'

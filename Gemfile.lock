@@ -203,7 +203,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.1)
   rails_12factor
-  rapgenius
+  rapgenius (~> 1.0.5)
   responders (~> 2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
