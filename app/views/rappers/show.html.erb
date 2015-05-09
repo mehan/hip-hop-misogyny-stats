@@ -1,11 +1,12 @@
 <div class="add-shadow">
 <h2>Here are the misogyny stats for <%= @rapper.name %>:</h2>
 
-<h3>In the <%= @rapper.song_count %> most popular* <%= @rapper.name %> songs, <%= @rapper.name %> uses the word 'bitch' <%= @rapper.bitch_count %> times, 'pussy' <%= @rapper.pussy_count %> times and 'hoe' <%= @rapper.ho_count %> times.</h3>
+<h3>In the <%= @rapper.song_count %> most popular* <%= @rapper.name %> songs, <%= @rapper.name %> uses the word 'bitch' <%= @rapper.bitch_count %> times, 'pussy' <%= @rapper.pussy_count %> times and 'ho' <%= @rapper.ho_count %> times.</h3>
 <h3>Overall, we found <%= @rapper.overall_score %> misogynistic lyrics in <%= @rapper.song_count %> <%= @rapper.name %> songs.</h3>
 <p>*According to RapGenius data</p>
 </br>
-<%= tweet_button(via: "", count: "horizontal", text: "How many misogynistic words does "+@rapper.name+" use? Check out "+@rapper.name+"'s page on Hip-Hop Misogyny Stats:") %><%= like_button(app_id: ENV["FACEBOOK_APP_ID"], layout: "button-count") %>
+<%= tweet_button(via: "", count: "horizontal", text: "How many misogynistic words does "+@rapper.name+" use? Check out "+@rapper.name+"'s page on Hip-Hop Misogyny Stats:") %>
+<%= like_button(app_id: ENV["FACEBOOK_APP_ID"], layout: "button-count") %>
 </br>
 </br>
 <h4><%= link_to 'Look up another artist', root_path, class: '' %></h4>
