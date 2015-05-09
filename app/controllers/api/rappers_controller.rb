@@ -5,9 +5,9 @@ module Api
     @all_rappers = Rapper.where(song_count: 20)
   end
 
-  def show
-    @rapper = Rapper.find(params[:id])
-  end
+  # def show
+  #   @rapper = Rapper.find(params[:id])
+  # end
 
     private
 

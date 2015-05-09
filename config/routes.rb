@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 root 'rappers#new'
 resources :rappers
-# get 'api' => 'rappers#api'
+get 'api' => 'rappers#api'
 get 'about' => 'rappers#about'
 
 namespace :api do  

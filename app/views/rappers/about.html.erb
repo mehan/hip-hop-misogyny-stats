@@ -3,7 +3,10 @@
 
 <h2>How it works</h2>
 
-<p>Hip-Hop Misogyny Stats collects its stats from RapGenius data, via <a href="https://github.com/timrogers/rapgenius">this Ruby gem</a>. When you search for an artist, it requests the lyrics for that artist's 20 most popular songs and then performs an analysis on those lyrics, counting the frequency of specific misogynistic terms. If there are fewer than 20 songs available from an artist, that artist will be added to the database but will not be displayed on the stats page, in the interest of providing a proper baseline for the stats. This site was built using Ruby on Rails; you can view the source code <a href="https://github.com/mehan/hip-hop-misogyny-stats">here</a>.</p>
+<p>Hip-Hop Misogyny Stats collects its stats from RapGenius data, via <a href="https://github.com/timrogers/rapgenius">this Ruby gem</a>. When you search for an artist, it requests the lyrics for that artist's 20 most popular songs and then performs an analysis on those lyrics, counting the frequency of specific misogynistic terms. If the artist does not already exist in the database, the artist will then be added to the database. If there are fewer than 20 songs available from an artist, that artist will be added to the database but will not be displayed on the stats page, in the interest of providing a proper baseline for the stats.
+</p>
+
+<p>This site was built using Ruby on Rails; you can view the source code <a href="https://github.com/mehan/hip-hop-misogyny-stats">here</a>. Read-access to all of the stats is available via the <a href="/api">API</a>.</p>
 
 <p>It's worth noting that raw numbers don't tell the whole story: the stats you see on this site are provided without the surrounding context in which these lyrics exist. An artist with a higher score on this site is not <em>necessarily</em> more misogynistic than an artist with a lower score--the way in which words are used is often as important as the words themselves. These stats are provided as an educational resource, without judgement.</p>
 

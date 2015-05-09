@@ -2,8 +2,10 @@
 /*base background color is  #2EFFD2*/
 body {
 background-image: linear-gradient(-90deg, #ED9B64, #FF0AC6);
-color: white;
-padding-top: 50px;
+/*background-image: linear-gradient(-90deg, rgba(237,155,100, 1.0), rgba(255,10,198, 1.0));*/
+color: #E7E7E7;
+padding-top: 0px;
+padding-bottom: 20px;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -13,13 +15,18 @@ padding-top: 50px;
 a {color: #7FDBFF;}
 
 .navbar {
-   background-color:rgba(0, 0, 0, 0.2);
+   background-color:rgba(0, 0, 0, 0.3);
 /*   background: transparent;*/
 border: 0;
 }
 
 .navbar .nav > li > a { color: #7FDBFF; } 
 
-.container { background-color:rgba(0, 0, 0, 0.1);}
+.container { background-color:rgba(0, 0, 0, 0.2);}
+
+.whole-page {}
 
 #homepage {background-color: transparent;}
+
+
+

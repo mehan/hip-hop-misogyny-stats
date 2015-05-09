@@ -1,8 +1,5 @@
 class RappersController < ApplicationController
 
-def api
-end
-
 def about
   @rappers = Rapper.all
   end
