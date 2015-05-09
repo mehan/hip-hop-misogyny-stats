@@ -31,6 +31,8 @@ gem 'font-awesome-rails'
 gem 'jquery-tablesorter'
 gem 'kaminari' # adds pagination to ActiveModels  
 gem 'responders', '~> 2.0'
+gem 'tweet-button'
+gem "social-buttons", '~> 0.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
