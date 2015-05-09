@@ -2,8 +2,12 @@ Rails.application.routes.draw do
 
 root 'rappers#new'
 resources :rappers
-get 'api' => 'rappers#api'
+# get 'api' => 'rappers#api'
 get 'about' => 'rappers#about'
+
+namespace :api do  
+  resources :rappers, :only => [:show, :index], :defaults => { :format => 'json' }
+end  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
