@@ -1,28 +1,9 @@
-== README
+== Hip-Hop Misogyny Stats
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hip-Hop Misogyny Stats is website that collects stats on the use of misogynistic terms by different hip-hop artists and makes them available via search, a table view and a REST API. You can view the live site at (misogynystats.com)[http://misogynystats.com]. A few notes on how the site works:
 
-Things you may want to cover:
+* The site was built using Ruby on Rails, specifically, Rails v4.2.1.
 
-* Ruby version
+* It makes use of Tim Rogers' (Rap Genius gem)[https://github.com/timrogers/rapgenius], in order to perform searches on Rap Genius lyrics. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* It uses this (Social-Buttons gem)[https://github.com/iffyuva/social-buttons] in order to provide Twitter and Facebook sharing links on each rapper's show page.
