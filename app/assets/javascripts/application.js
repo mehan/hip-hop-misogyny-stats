@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require google_analytics
 //= require twitter/bootstrap
 //= require jquery-tablesorter
 //= require turbolinks
