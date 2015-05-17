@@ -5,7 +5,7 @@
 <h3>Overall, we found <%= @rapper.overall_score %> misogynistic lyrics in <%= @rapper.song_count %> <%= @rapper.name %> songs.</h3>
 <p>*According to RapGenius data</p>
 </br>
-<%= tweet_button(via: "", count: "horizontal", text: "How many misogynistic words does "+@rapper.name+" use? Check out "+@rapper.name+"'s page on Hip-Hop Misogyny Stats:") %>
+<%= tweet_button(url: request.original_url, via: "", count: "horizontal", text: "How many misogynistic words does "+@rapper.name+" use? Check out "+@rapper.name+"'s page on Hip-Hop Misogyny Stats:") %>
 <%= like_button(app_id: ENV["FACEBOOK_APP_ID"], layout: "button-count") %>
 </br>
 </br>
