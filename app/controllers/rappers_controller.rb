@@ -23,13 +23,13 @@ def create
 if @song_index == []
   render :new, alert: "Sorry, the rapper you searched for was not found."
 
-elsif Rapper.exists?(name: @song_index[1].artist.name)
-      @artist_name = @song_index[1].artist.name
+elsif Rapper.exists?(name: @song_index[0].artist.name)
+      @artist_name = @song_index[0].artist.name
       @new_rapper = Rapper.find_by(name: @artist_name)
       redirect_to @new_rapper
 
     else
-  @artist_name = @song_index[1].artist.name
+  @artist_name = @song_index[0].artist.name
   @song_ids = @song_index.map do |song| 
     song.id 
   end
