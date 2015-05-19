@@ -15,5 +15,6 @@
 //= require google_analytics
 //= require twitter/bootstrap
 //= require jquery-tablesorter
+//= require alert
 //= require turbolinks
 //= require_tree .

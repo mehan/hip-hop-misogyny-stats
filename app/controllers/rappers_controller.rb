@@ -17,11 +17,16 @@ end
   end
 
 def create
+
+flash[:alert] = nil  
 @rapper = Rapper.new(rapper_params)
 @song_index = RapGenius.search_by_artist(@rapper.name)
 
+
 if @song_index == []
-  render :new, alert: "Sorry, the rapper you searched for was not found."
+  flash[:alert] = "Sorry, the rapper you searched for was not found."
+  render :new 
+
 
 elsif Rapper.exists?(name: @song_index[0].artist.name)
       @artist_name = @song_index[0].artist.name
@@ -67,7 +72,8 @@ elsif Rapper.exists?(name: @song_index[0].artist.name)
     if @new_rapper.save
     redirect_to @new_rapper
   else
-    render :new, alert: "Sorry, we encountered an error while trying to look up that rapper. Please try again."
+      flash[:alert] = "Sorry, we encountered an error while trying to look up that artist. Please try again."
+  render :new 
 end
 end
 end

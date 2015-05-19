@@ -1,12 +1,3 @@
-<div id="homepage">
-    <% if @rapper.errors.any? %>
-  <% @rapper.errors.full_messages.each do |message| %>
-  <div class = "alert alert-danger">
-  <%= message %>
-  </div>
-  <% end %>
-  <% end %>
-
 <h3>Stats on the frequency with which misogynistic words appear in hip-hop songs</h3>
 </br>
 
@@ -19,5 +10,4 @@
 </br>
 <%= f.button "Lookup artist", class: "btn btn-warning form-control input-lg", data: {disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Looking up artist..."} %>
 <% end %>
-</div>
 </div>

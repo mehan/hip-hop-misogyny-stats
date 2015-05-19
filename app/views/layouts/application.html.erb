@@ -4,6 +4,7 @@
   <title>HipHopMisogynyStats</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag  'application', params[:controller], media: 'all' %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <%= render 'layouts/google_analytics' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -19,7 +20,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!-- <a class="navbar-brand" href="#">Hip-Hop Misogyny Calculator</a> -->
+
       </a>
     </div>
  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -32,14 +33,20 @@
 </div>
 </nav>
 
+<div class="container">
+<div class="row">
+<div class="col-md-12">
 <% if alert %>
-<div class = "alert alert-danger">
+<div class = "alert alert-info">
   <%= alert %>
 </div>
 <% end %>
+</div>
+</div>
+</div>
 
 
-<div class="container">
+<div class="container" id="main_container">
 <div class="row">
 <div class="col-md-12">
 <h1>Hip-Hop Misogyny Stats</h1>
