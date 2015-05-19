@@ -1,6 +1,7 @@
 
 /*base background color is  #2EFFD2*/
 body {
+background-color: #FF0AC6;  
 background-image: linear-gradient(-90deg, #ED9B64, #FF0AC6);
 color: #E7E7E7;
 /*color: white;*/
