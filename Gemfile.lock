@@ -136,7 +136,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    rapgenius (1.0.5)
+    rapgenius (1.1.1)
       httparty (~> 0.11.0)
     rdoc (4.2.0)
       json (~> 1.4)
@@ -203,7 +203,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.1)
   rails_12factor
-  rapgenius (~> 1.0.5)
+  rapgenius (~> 1.1.1)
   responders (~> 2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

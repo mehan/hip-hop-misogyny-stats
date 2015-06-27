@@ -1,5 +1,8 @@
 class RappersController < ApplicationController
 
+# Genius.access_token = ENV["GENIUS_ACCESS_TOKEN"]
+RapGenius::Client.access_token = ENV["GENIUS_ACCESS_TOKEN"]
+
 def about
   @rappers = Rapper.all
   end

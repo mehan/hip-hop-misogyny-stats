@@ -22,8 +22,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# gem "rapgenius", "~> 1.0.5"
+# gem "genius", "~> 0.1.0"
+gem "rapgenius", "~> 1.1.1"
 
-gem "rapgenius", "~> 1.0.5"
 gem "twitter-bootstrap-rails"
 # gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'
